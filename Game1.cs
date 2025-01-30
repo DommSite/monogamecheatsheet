@@ -11,7 +11,8 @@ public class Game1 : Game
     private GraphicsDeviceManager _graphics;
     private SpriteBatch _spriteBatch;
     List<BaseClass> entities = new List<BaseClass>();
-    Texture2D pixel;
+    private BulletSystem bulletSystem;
+    
 
     public Game1()
     {
@@ -32,8 +33,15 @@ public class Game1 : Game
         _spriteBatch = new SpriteBatch(GraphicsDevice);
 
         // TODO: use this.Content to load your game content here
+        Texture2D pixel;
+        Texture2D bullet;
         pixel = new Texture2D(GraphicsDevice,1,1);
         pixel.SetData(new Color[]{Color.White});
+
+        bullet = new Texture2D(GraphicsDevice,1,1);
+        bullet.SetData(new Color[]{Color.White});
+
+        bulletSystem = new BulletSystem(bullet);
 
         entities.Add(new Player(pixel));
         entities.Add(new Enemy(pixel, new Vector2(400,380)));
