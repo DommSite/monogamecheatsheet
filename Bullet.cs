@@ -7,10 +7,9 @@ namespace monogamecheatsheet
     public class Bullet : BaseClass
     {
         private int size;
-        private Color color;
+        Texture2D bulletImage;
         
-        Vector2 direction;
-        //float angle;
+        double angle;
         Vector2 position;
 
 
@@ -19,10 +18,24 @@ namespace monogamecheatsheet
 
 
 
-        public Bullet(Texture2D texture, Vector2 position, float angle)
+        public Bullet(Texture2D texture, Vector2 position, double angle)
             :base(texture, new Microsoft.Xna.Framework.Vector2(position.X, position.Y))
         {
-            color = Microsoft.Xna.Framework.Color.Green;
+            this.bulletImage = texture;
+            this.angle = angle;
+            this.position = position;
         }
+
+        public override void Update(){
+            
+        }
+
+        public override void Draw(SpriteBatch spriteBatch)
+        {
+            
+        }
+
+
+
     }
 }

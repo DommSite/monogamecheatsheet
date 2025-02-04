@@ -1,7 +1,10 @@
+using System;
 using System.Drawing;
+using System.Windows.Forms;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using SharpDX.Direct3D9;
 
 namespace monogamecheatsheet
 {
@@ -43,9 +46,15 @@ namespace monogamecheatsheet
                 position.Y = 190;
             }
 
-            if(mState.LeftButton==ButtonState.Pressed) 
+            if(mState.LeftButton==Microsoft.Xna.Framework.Input.ButtonState.Pressed) 
             {
-                
+                Vector2 vector;
+                vector.Y = Button.MousePosition.Y - position.Y;
+                vector.X = Button.MousePosition.X - position.X;
+                double angle = Math.Atan2(vector.Y,vector.X);
+                BulletSystem.SummonBullet(position, angle);
+
+
             }
                 
             

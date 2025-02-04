@@ -24,7 +24,7 @@ namespace monogamecheatsheet
             
         }
 
-        public void Draw(SpriteBatch spriteBatch)
+        public virtual void Draw(SpriteBatch spriteBatch)
         {
             rectangle = new Rectangle((int)position.X, (int)position.Y, 100, 100);   
                     
