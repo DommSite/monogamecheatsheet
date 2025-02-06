@@ -8,10 +8,20 @@ namespace monogamecheatsheet
 {
     public class BulletSystem
     {
+        public static BulletSystem Instance{
+            get{
+                return instance;
+            }
+        }
+        private static BulletSystem instance;
         List<Bullet> bullets = new List<Bullet>();
         Texture2D bulletImage;
+
+        public static void CreateInstance(Texture2D bulletImage){
+            instance = new BulletSystem(bulletImage);
+        }
         
-        public BulletSystem(Texture2D bulletImage){
+        private BulletSystem(Texture2D bulletImage){
             this.bulletImage = bulletImage;
         }
 
@@ -19,15 +29,22 @@ namespace monogamecheatsheet
             bullets.Add(new Bullet(bulletImage, position, angle));
         }
 
+        private void RemoveBullet(){
+
+        }
+
         public virtual void Update(){
             foreach(var Bullet in bullets){
                 Bullet.Update();
             }
+
         }
 
         public virtual void Draw(SpriteBatch spriteBatch)
         {
-            
+            foreach(var Bullet in bullets){
+                Bullet.Draw(spriteBatch);
+            }
         }
     }
 }

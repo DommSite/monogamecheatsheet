@@ -25,3 +25,4 @@ C:\Users\Admin\Documents\GitHub\monogamecheatsheet\obj\Debug\net8.0-windows\refi
 C:\Users\Admin\Documents\GitHub\monogamecheatsheet\obj\Debug\net8.0-windows\monogamecheatsheet.pdb
 C:\Users\Admin\Documents\GitHub\monogamecheatsheet\obj\Debug\net8.0-windows\monogamecheatsheet.genruntimeconfig.cache
 C:\Users\Admin\Documents\GitHub\monogamecheatsheet\obj\Debug\net8.0-windows\ref\monogamecheatsheet.dll
+C:\Users\Admin\Documents\GitHub\monogamecheatsheet\bin\Debug\net8.0-windows\Content\png-clipart-bullets-bullets-thumbnail.xnb

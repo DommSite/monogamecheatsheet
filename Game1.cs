@@ -41,9 +41,7 @@ public class Game1 : Game
         pixel.SetData(new Color[]{Color.White});
 
         bullet = Content.Load<Texture2D>("png-clipart-bullets-bullets-thumbnail");
-
-        bulletSystem = new BulletSystem(bullet);
-        
+        BulletSystem.CreateInstance(bullet);
 
         entities.Add(new Player(pixel));
         entities.Add(new Enemy(pixel, new Vector2(400,380)));
@@ -58,7 +56,7 @@ public class Game1 : Game
         foreach(var entity in entities){
             entity.Update();
         }
-        BulletSystem.Update();
+        BulletSystem.Instance.Update();
         base.Update(gameTime);
     }
 
@@ -72,7 +70,7 @@ public class Game1 : Game
         foreach(var entity in entities){
             entity.Draw(_spriteBatch);
         }
-        BulletSystem.Draw(_spriteBatch);
+        BulletSystem.Instance.Draw(_spriteBatch);
 
         _spriteBatch.End();
         base.Draw(gameTime);

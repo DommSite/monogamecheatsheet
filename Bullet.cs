@@ -1,3 +1,4 @@
+using System;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
@@ -8,9 +9,10 @@ namespace monogamecheatsheet
     {
         private int size;
         Texture2D bulletImage;
+        private float speed = 1;
         
-        double angle;
-        Vector2 position;
+        private double angle;
+        
 
 
 
@@ -27,12 +29,18 @@ namespace monogamecheatsheet
         }
 
         public override void Update(){
-            
+            position.X += (float) (Math.Cos(angle)) * speed;
+            position.Y += (float) (Math.Sin(angle)) * speed;
         }
 
         public override void Draw(SpriteBatch spriteBatch)
         {
-            
+            Rectangle sourceRectangle = new Rectangle(0, 0, bulletImage.Width, bulletImage.Height);
+            Vector2   scale;
+            scale.X = 0.01f;
+            scale.Y = 0.01f;
+
+            spriteBatch.Draw(bulletImage, position, sourceRectangle,Color.White, (float)angle, position, scale,SpriteEffects.None,1);
         }
 
 
