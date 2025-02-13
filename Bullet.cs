@@ -11,7 +11,7 @@ namespace monogamecheatsheet
         Texture2D bulletImage;
         private float speed = 1;
         
-        private double angle;
+        private Vector2 direction;
         
 
 
@@ -20,17 +20,16 @@ namespace monogamecheatsheet
 
 
 
-        public Bullet(Texture2D texture, Vector2 position, double angle)
+        public Bullet(Texture2D texture, Vector2 position, Vector2 direction)
             :base(texture, new Microsoft.Xna.Framework.Vector2(position.X, position.Y))
         {
             this.bulletImage = texture;
-            this.angle = angle;
+            this.direction = direction;
             this.position = position;
         }
 
         public override void Update(){
-            position.X += (float) (Math.Cos(angle)) * speed;
-            position.Y += (float) (Math.Sin(angle)) * speed;
+            position += direction * speed;
         }
 
         public override void Draw(SpriteBatch spriteBatch)
@@ -40,7 +39,7 @@ namespace monogamecheatsheet
             scale.X = 0.01f;
             scale.Y = 0.01f;
 
-            spriteBatch.Draw(bulletImage, position, sourceRectangle,Color.White, (float)angle, position, scale,SpriteEffects.None,1);
+            spriteBatch.Draw(bulletImage, position, sourceRectangle,Color.White, (float)(Math.Atan2(direction.Y,direction.X)), position, scale,SpriteEffects.None,1);
         }
 
 

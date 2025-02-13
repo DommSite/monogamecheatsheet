@@ -25,8 +25,8 @@ namespace monogamecheatsheet
             this.bulletImage = bulletImage;
         }
 
-        public void SummonBullet(Vector2 position, double angle){
-            bullets.Add(new Bullet(bulletImage, position, angle));
+        public void SummonBullet(Vector2 position, Vector2 direction){
+            bullets.Add(new Bullet(bulletImage, position, direction));
         }
 
         private void RemoveBullet(){

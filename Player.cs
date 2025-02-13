@@ -1,6 +1,4 @@
 using System;
-using System.Drawing;
-using System.Windows.Forms;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
@@ -21,7 +19,7 @@ namespace monogamecheatsheet
         {      
             KeyboardState kState = Keyboard.GetState();
             MouseState mState = Mouse.GetState();
-            
+            Vector2 direction = new Vector2(0,0);
 
 
 
@@ -30,19 +28,19 @@ namespace monogamecheatsheet
 
             if(kState.IsKeyDown(Microsoft.Xna.Framework.Input.Keys.W)) 
             {
-                position.Y -= speed;
+                direction.Y -= 1;
             }
             if(kState.IsKeyDown(Microsoft.Xna.Framework.Input.Keys.S)) 
             {
-                position.Y += speed;
+                direction.Y += 1;
             }
             if(kState.IsKeyDown(Microsoft.Xna.Framework.Input.Keys.A)) 
             {
-                position.X -= speed;
+                direction.X -= 1;
             }
             if(kState.IsKeyDown(Microsoft.Xna.Framework.Input.Keys.D)) 
             {
-                position.X += speed;
+                direction.X += 1;
             }
             if(kState.IsKeyDown(Microsoft.Xna.Framework.Input.Keys.R))
             {
@@ -50,14 +48,17 @@ namespace monogamecheatsheet
                 position.Y = 190;
             }
 
-            if(mState.LeftButton == Microsoft.Xna.Framework.Input.ButtonState.Pressed && oldState.LeftButton == Microsoft.Xna.Framework.Input.ButtonState.Released) 
-            {
-                Vector2 vector;
-                vector.Y = Button.MousePosition.Y - position.Y;
-                vector.X = Button.MousePosition.X - position.X;
-                double angle = Math.Atan2(vector.Y,vector.X);
+            if(direction != Vector2.Zero){
+                direction.Normalize();
+            }
+            position+=direction * speed;
 
-                BulletSystem.Instance.SummonBullet(position, angle);
+            if(mState.LeftButton == ButtonState.Pressed && oldState.LeftButton == ButtonState.Released) 
+            {
+                Vector2 bulletDirection = mState.Position.ToVector2() - position;;;
+                bulletDirection.Normalize();
+
+                BulletSystem.Instance.SummonBullet(position, bulletDirection);
             }
                 
             
