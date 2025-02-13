@@ -2,6 +2,7 @@ using System;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using SharpDX.MediaFoundation;
 
 namespace monogamecheatsheet
 {
@@ -36,10 +37,9 @@ namespace monogamecheatsheet
         {
             Rectangle sourceRectangle = new Rectangle(0, 0, bulletImage.Width, bulletImage.Height);
             Vector2   scale;
-            scale.X = 0.01f;
-            scale.Y = 0.01f;
-
-            spriteBatch.Draw(bulletImage, position, sourceRectangle,Color.White, (float)(Math.Atan2(direction.Y,direction.X)), position, scale,SpriteEffects.None,1);
+            scale.X = 0.1f;
+            scale.Y = 0.1f;
+            spriteBatch.Draw(bulletImage, position, sourceRectangle,Color.White, (float)((Math.Atan2(direction.Y,direction.X))+((float)(Math.PI)/2f)), position/2, scale,SpriteEffects.None,1);
         }
 
 

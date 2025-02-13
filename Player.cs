@@ -23,7 +23,7 @@ namespace monogamecheatsheet
 
 
 
-            int speed = 5;
+            int speed = 2;
 
 
             if(kState.IsKeyDown(Microsoft.Xna.Framework.Input.Keys.W)) 
@@ -55,7 +55,7 @@ namespace monogamecheatsheet
 
             if(mState.LeftButton == ButtonState.Pressed && oldState.LeftButton == ButtonState.Released) 
             {
-                Vector2 bulletDirection = mState.Position.ToVector2() - position;;;
+                Vector2 bulletDirection = mState.Position.ToVector2() - position;
                 bulletDirection.Normalize();
 
                 BulletSystem.Instance.SummonBullet(position, bulletDirection);
