@@ -49,6 +49,10 @@ namespace monogamecheatsheet
                 position.X = 350;
                 position.Y = 190;
             }
+            if(kState.IsKeyDown(Microsoft.Xna.Framework.Input.Keys.LeftShift)) 
+            {
+                speed = speed*2;
+            }
 
             if(direction != Vector2.Zero){
                 direction.Normalize();

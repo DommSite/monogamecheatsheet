@@ -44,7 +44,7 @@ public class Game1 : Game
         BulletSystem.CreateInstance(bullet);
 
         entities.Add(new Player(pixel));
-        entities.Add(new Enemy(pixel, new Vector2(400,380)));
+        entities.Add(new Enemy(pixel, new Vector2(400,380), entities));
     }
 
     protected override void Update(GameTime gameTime)

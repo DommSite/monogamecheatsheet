@@ -30,14 +30,19 @@ namespace monogamecheatsheet
         }
 
         private void RemoveBullet(){
-
+            for (int i = 0;i<bullets.Count;i++){
+                if(bullets[i].Position.Y>500){
+                    particles.RemoveAt(i);
+                    i--;
+                }
+            }      
         }
 
         public virtual void Update(){
             foreach(var Bullet in bullets){
                 Bullet.Update();
             }
-
+            
         }
 
         public virtual void Draw(SpriteBatch spriteBatch)
