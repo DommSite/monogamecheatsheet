@@ -40,7 +40,7 @@ public class Game1 : Game
         pixel = new Texture2D(GraphicsDevice,1,1);
         pixel.SetData(new Color[]{Color.White});
 
-        bullet = Content.Load<Texture2D>("png-clipart-bullets-bullets-thumbnail");
+        bullet = Content.Load<Texture2D>("bullet");
         BulletSystem.CreateInstance(bullet);
 
         entities.Add(new Player(pixel));

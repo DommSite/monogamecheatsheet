@@ -3,6 +3,7 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using SharpDX.Direct3D9;
+using SharpDX.MediaFoundation;
 
 namespace monogamecheatsheet
 {
@@ -14,6 +15,7 @@ namespace monogamecheatsheet
         {
             color = Microsoft.Xna.Framework.Color.Green;
         }
+        
 
         public override void Update()
         {      
@@ -63,6 +65,10 @@ namespace monogamecheatsheet
                 
             
             oldState = mState;
+        }
+
+        public Vector2 GetPosition(){
+            return position;
         }
     }
 }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "AcrZ0T3uVlU=",
+  "dgSpecHash": "7ikNObOIpW4=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Admin\\Documents\\GitHub\\monogamecheatsheet\\monogamecheatsheet.csproj",
+  "projectFilePath": "C:\\Users\\Admin\\Documents\\GitHub\\monogamecheatsheet\\monogamecheatsheet\\monogamecheatsheet.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.netcore.app\\2.1.30\\microsoft.netcore.app.2.1.30.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.netcore.dotnetapphost\\2.1.30\\microsoft.netcore.dotnetapphost.2.1.30.nupkg.sha512",

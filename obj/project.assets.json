@@ -4163,11 +4163,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Admin\\Documents\\GitHub\\monogamecheatsheet\\monogamecheatsheet.csproj",
+      "projectUniqueName": "C:\\Users\\Admin\\Documents\\GitHub\\monogamecheatsheet\\monogamecheatsheet\\monogamecheatsheet.csproj",
       "projectName": "monogamecheatsheet",
-      "projectPath": "C:\\Users\\Admin\\Documents\\GitHub\\monogamecheatsheet\\monogamecheatsheet.csproj",
+      "projectPath": "C:\\Users\\Admin\\Documents\\GitHub\\monogamecheatsheet\\monogamecheatsheet\\monogamecheatsheet.csproj",
       "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Admin\\Documents\\GitHub\\monogamecheatsheet\\obj\\",
+      "outputPath": "C:\\Users\\Admin\\Documents\\GitHub\\monogamecheatsheet\\monogamecheatsheet\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",

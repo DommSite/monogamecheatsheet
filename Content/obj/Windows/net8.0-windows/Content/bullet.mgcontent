@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <SourceFile>C:/Users/Admin/Documents/GitHub/monogamecheatsheet/monogamecheatsheet/Content/png-clipart-bullets-bullets-thumbnail.png</SourceFile>
-  <SourceTime>2025-03-04T14:26:34.5205773+01:00</SourceTime>
-  <DestFile>C:/Users/Admin/Documents/GitHub/monogamecheatsheet/monogamecheatsheet/Content/bin/Windows/Content/png-clipart-bullets-bullets-thumbnail.xnb</DestFile>
-  <DestTime>2025-03-04T14:27:59.0335631+01:00</DestTime>
+  <SourceFile>C:/Users/Admin/Documents/GitHub/monogamecheatsheet/monogamecheatsheet/Content/bullet.png</SourceFile>
+  <SourceTime>2025-02-13T13:28:03.7502641+01:00</SourceTime>
+  <DestFile>C:/Users/Admin/Documents/GitHub/monogamecheatsheet/monogamecheatsheet/Content/bin/Windows/Content/bullet.xnb</DestFile>
+  <DestTime>2025-03-04T14:31:30.9182681+01:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2024-08-16T19:05:56+02:00</ImporterTime>
   <Processor>TextureProcessor</Processor>
