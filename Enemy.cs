@@ -21,14 +21,13 @@ namespace monogamecheatsheet
         }
 
         public override void Update()
-        {
-            
+        {    
             Vector2 direction = p.GetPosition();
             direction = direction - position;
             if( direction != Vector2.Zero){
                 direction.Normalize();
             }
             position+=direction * speed;
-        }
+        }        
     }
 }

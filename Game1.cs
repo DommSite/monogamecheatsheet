@@ -10,7 +10,7 @@ public class Game1 : Game
 {
     private GraphicsDeviceManager _graphics;
     private SpriteBatch _spriteBatch;
-    List<BaseClass> entities = new List<BaseClass>();
+    private List<BaseClass> entities = new List<BaseClass>();
     private BulletSystem bulletSystem;
     Texture2D bullet;
     
@@ -36,6 +36,7 @@ public class Game1 : Game
         // TODO: use this.Content to load your game content here
         Texture2D pixel;
         Texture2D bullet;
+        Texture2D player;
 
         pixel = new Texture2D(GraphicsDevice,1,1);
         pixel.SetData(new Color[]{Color.White});
@@ -43,7 +44,9 @@ public class Game1 : Game
         bullet = Content.Load<Texture2D>("bullet");
         BulletSystem.CreateInstance(bullet);
 
-        entities.Add(new Player(pixel));
+        player = Content.Load<Texture2D>("Red_Arrow_Left");
+
+        entities.Add(new Player(player));
         entities.Add(new Enemy(pixel, new Vector2(400,380), entities));
     }
 
